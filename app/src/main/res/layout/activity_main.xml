@@ -8,8 +8,9 @@
 
     <Spinner
         android:id="@+id/DrugSelectionSpinner"
-        android:layout_width="368dp"
-        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:spinnerMode="dialog"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"

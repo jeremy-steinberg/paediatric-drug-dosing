@@ -8,53 +8,55 @@
 
     <Spinner
         android:id="@+id/DrugSelectionSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-		android:spinnerMode="dialog"
+        android:layout_width="281dp"
+        android:layout_height="74dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
+        android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ChooseDrugLabel" />
-
-    <TextView
-        android:id="@+id/ChooseDrugLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="36dp"
-        android:text="Choose Drug:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toEndOf="@+id/ChooseDrugLabel"
         app:layout_constraintTop_toBottomOf="@+id/WeightInput" />
 
     <TextView
-        android:id="@+id/ChooseWeightLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="156dp"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="16dp"
-        android:text="Weight (kg)"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/ChooseDrugLabel"
+        android:layout_width="55dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="Drug"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ChooseWeightLabel" />
+
+    <TextView
+        android:id="@+id/ChooseWeightLabel"
+        android:layout_width="79dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="Weight (kg)"
+        app:layout_constraintBottom_toBottomOf="@+id/ChooseDrugLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/WeightInput"
-        android:layout_width="76dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="77dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="number"
         android:singleLine="true"
         android:text="25"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ChooseWeightLabel" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ChooseWeightLabel"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/CalculateButton"
@@ -62,9 +64,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="139dp"
         android:layout_marginStart="142dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DrugSelectionSpinner" />
 
@@ -74,9 +77,10 @@
         android:layout_height="120dp"
         android:layout_marginEnd="42dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="240dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,9 +90,10 @@
         android:layout_height="120dp"
         android:layout_marginEnd="42dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="360dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

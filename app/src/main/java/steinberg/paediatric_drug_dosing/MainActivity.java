@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setTitle("Paediatric Drug Dosing");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

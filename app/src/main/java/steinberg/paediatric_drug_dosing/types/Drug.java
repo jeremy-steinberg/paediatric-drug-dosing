@@ -5,8 +5,8 @@ public class Drug {
     public final String Name;
     public final String HumanFriendlyName;
     public final String FrequencyMessage;
-    public final double VariableMilliliters;
-    public final double VariableMilligrams;
+    public final double BaseMilliliters;
+    public final double BaseMilligrams;
     public final double MaximumMilliliters;
     public final double MaximumMilligrams;
 
@@ -16,14 +16,14 @@ public class Drug {
     public double HighMillilitersMaximum;
     public double HighMilligramsMaximum;
 
-    public Drug(String name, String humanFriendlyName, String frequencyMessage, double variableMilliliters, double variableMilligrams,
+    public Drug(String name, String humanFriendlyName, String frequencyMessage, double baseMilliliters, double baseMilligrams,
                 double maximumMilliliters, double maximumMilligrams)
     {
         Name = name;
         HumanFriendlyName = humanFriendlyName;
         FrequencyMessage = frequencyMessage;
-        VariableMilliliters = variableMilliliters;
-        VariableMilligrams = variableMilligrams;
+        BaseMilliliters = baseMilliliters;
+        BaseMilligrams = baseMilligrams;
         MaximumMilliliters = maximumMilliliters;
         MaximumMilligrams = maximumMilligrams;
     }

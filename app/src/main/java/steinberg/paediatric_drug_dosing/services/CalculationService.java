@@ -10,7 +10,7 @@ public class CalculationService {
 
     public static String GetDoseMessage(Drug drug, int weight)
     {
-        double totalUnrounded = Math.min(weight * drug.VariableMilliliters, drug.MaximumMilliliters);
+        double totalUnrounded = Math.min(weight * drug.BaseMilliliters, drug.MaximumMilliliters);
         String totalString = formatter.format(totalUnrounded);
 
         if (drug.HighMillilitersMaximum != 0)
@@ -54,7 +54,7 @@ public class CalculationService {
 
     public static String GetMilligramsDoseMessage(Drug drug, int weight)
     {
-        double totalUnrounded = Math.min(weight * drug.VariableMilligrams, drug.MaximumMilligrams);
+        double totalUnrounded = Math.min(weight * drug.BaseMilligrams, drug.MaximumMilligrams);
         String totalString = formatter.format(totalUnrounded);
 
         if (drug.HighMilligramsMaximum != 0)

@@ -45,7 +45,26 @@ public class MainActivity extends AppCompatActivity {
                 final EditText weightInput = findViewById(R.id.WeightInput);
                 final int drugIndex = _drugNames.indexOf(drugSpinner.getSelectedItem().toString());
                 final Drug drug = _drugs.get(drugIndex);
-                final int weight = Integer.parseInt(weightInput.getText().toString());
+                final int weight;
+                try {
+                    weight = Integer.parseInt(weightInput.getText().toString());
+                }
+                catch (Exception e)
+                {
+                    doseOutput.setText("Please enter a weight between 1-100kg");
+                    doseOutput.setVisibility(View.VISIBLE);
+                    milligramsOutput.setText("");
+                    milligramsOutput.setVisibility(View.INVISIBLE);
+                    return;
+                }
+                if (weight <= 0 || weight > 100)
+                {
+                    doseOutput.setText("Please enter a weight between 1-100kg");
+                    doseOutput.setVisibility(View.VISIBLE);
+                    milligramsOutput.setText("");
+                    milligramsOutput.setVisibility(View.INVISIBLE);
+                    return;
+                }
                 doseOutput.setText(CalculationService.GetDoseMessage(drug, weight));
                 doseOutput.setVisibility(View.VISIBLE);
                 milligramsOutput.setText(CalculationService.GetMilligramsDoseMessage(drug, weight));

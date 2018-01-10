@@ -1,5 +1,4 @@
 package steinberg.paediatric_drug_dosing.services;
-
 import java.text.DecimalFormat;
 
 import steinberg.paediatric_drug_dosing.types.Drug;
@@ -11,6 +10,18 @@ public class CalculationService {
     public static String GetDoseMessage(Drug drug, int weight)
     {
         double totalUnrounded = Math.min(weight * drug.BaseMilliliters, drug.MaximumMilliliters);
+
+        if (!drug.WeightToMillilitersData.isEmpty())
+        {
+            for (Integer key: drug.WeightToMillilitersData.keySet())
+            {
+                if (key < weight)
+                {
+                    totalUnrounded = drug.WeightToMillilitersData.get(key);
+                }
+            }
+        }
+
         String totalString = formatter.format(totalUnrounded);
 
         if (drug.HighMillilitersMaximum != 0)
@@ -55,6 +66,17 @@ public class CalculationService {
     public static String GetMilligramsDoseMessage(Drug drug, int weight)
     {
         double totalUnrounded = Math.min(weight * drug.BaseMilligrams, drug.MaximumMilligrams);
+
+        if (!drug.WeightToMilligramsData.isEmpty())
+        {
+            for (Integer key: drug.WeightToMilligramsData.keySet())
+            {
+                if (key < weight)
+                {
+                    totalUnrounded = drug.WeightToMilligramsData.get(key);
+                }
+            }
+        }
         String totalString = formatter.format(totalUnrounded);
 
         if (drug.HighMilligramsMaximum != 0)

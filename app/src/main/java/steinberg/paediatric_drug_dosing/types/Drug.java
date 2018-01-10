@@ -1,4 +1,5 @@
 package steinberg.paediatric_drug_dosing.types;
+import java.util.TreeMap;
 
 public class Drug {
     // Required fields
@@ -15,6 +16,8 @@ public class Drug {
     public String MessageMilligrams;
     public double HighMillilitersMaximum;
     public double HighMilligramsMaximum;
+    public TreeMap<Integer, Integer> WeightToMillilitersData = new TreeMap<Integer, Integer>();
+    public TreeMap<Integer, Integer> WeightToMilligramsData = new TreeMap<Integer, Integer>();
 
     public Drug(String name, String humanFriendlyName, String frequencyMessage, double baseMilliliters, double baseMilligrams,
                 double maximumMilliliters, double maximumMilligrams)

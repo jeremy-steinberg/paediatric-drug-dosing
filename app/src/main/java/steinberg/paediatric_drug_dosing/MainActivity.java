@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         final Button button = findViewById(R.id.CalculateButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                final TextView doseOutput = findViewById(R.id.DoseOutput);
+                final TextView millilitersOutput = findViewById(R.id.MillilitersOutput);
                 final TextView milligramsOutput = findViewById(R.id.MilligramsOutput);
                 final Spinner drugSpinner = findViewById(R.id.DrugSelectionSpinner);
                 final EditText weightInput = findViewById(R.id.WeightInput);
@@ -51,22 +51,22 @@ public class MainActivity extends AppCompatActivity {
                 }
                 catch (Exception e)
                 {
-                    doseOutput.setText("Please enter a weight between 1-100kg");
-                    doseOutput.setVisibility(View.VISIBLE);
+                    millilitersOutput.setText("Please enter a weight between 1-100kg");
+                    millilitersOutput.setVisibility(View.VISIBLE);
                     milligramsOutput.setText("");
                     milligramsOutput.setVisibility(View.INVISIBLE);
                     return;
                 }
                 if (weight <= 0 || weight > 100)
                 {
-                    doseOutput.setText("Please enter a weight between 1-100kg");
-                    doseOutput.setVisibility(View.VISIBLE);
+                    millilitersOutput.setText("Please enter a weight between 1-100kg");
+                    millilitersOutput.setVisibility(View.VISIBLE);
                     milligramsOutput.setText("");
                     milligramsOutput.setVisibility(View.INVISIBLE);
                     return;
                 }
-                doseOutput.setText(CalculationService.GetDoseMessage(drug, weight));
-                doseOutput.setVisibility(View.VISIBLE);
+                millilitersOutput.setText(CalculationService.GetDoseMessage(drug, weight));
+                millilitersOutput.setVisibility(View.VISIBLE);
                 milligramsOutput.setText(CalculationService.GetMilligramsDoseMessage(drug, weight));
                 milligramsOutput.setVisibility(View.VISIBLE);
             }
